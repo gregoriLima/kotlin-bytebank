@@ -1,5 +1,18 @@
 fun main() {
-    println("testano")
+
+}
+
+class Conta {
+    var titular = ""
+    var numero = 0
+    var saldo = 0.0
+}
+
+
+
+
+fun testaKotlin(){
+    println("testando")
 
     var podeSerModificada = "modificavel"
     val naoPodeSerModificada = "nao modificavel"
@@ -38,7 +51,6 @@ fun main() {
         println(i)
 
 }
-
 fun verificaSaldo(saldo: Int) {
     when {
         saldo < 0 -> println("Saldo negativo")
