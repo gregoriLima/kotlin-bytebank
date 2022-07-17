@@ -1,11 +1,21 @@
 fun main() {
+    testaKotlin()
+
+    val conta1 = Conta("Greg", 123, 321.0)
+    conta1.saldo
+
+    val conta2ComLabels = Conta(saldo=123.3, titular="Greg2")
 
 }
 
-class Conta {
-    var titular = ""
-    var numero = 0
-    var saldo = 0.0
+class Conta(var titular: String, var numero: Int? = 111, saldo: Double) { // esse é o construtor primário
+    var saldo = saldo
+        private set(valor){
+            field = valor // field é a variável saldo
+        }
+    init {
+        println("executado na construção")
+    }
 }
 
 
